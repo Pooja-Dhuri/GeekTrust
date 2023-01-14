@@ -1,0 +1,25 @@
+.navbar_main_box{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    background-color: rgb(225, 221, 221);
+    padding: 0px 30px 0px 30px ;
+}
+.navbar_product_box{
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+    align-items: center;
+}
+.cart_icon{
+    font-size: 40px;
+    color: black;
+}
+.cart_count{
+    position:relative;
+        left:-5px;
+        top:-30px;
+        font-weight: bold;
+}
