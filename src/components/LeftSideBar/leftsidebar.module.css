@@ -1,0 +1,11 @@
+.filter_main_box>div>div{
+    display: flex;
+    gap: 20px;
+    /* border: 1px solid pink; */
+    line-height: 0.001px;
+}
+.filter_main_box{
+    line-height: 0.001px;
+    text-align: left;
+    padding: 40px;
+}
