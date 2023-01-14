@@ -18,7 +18,8 @@ const Navbar = () => {
             <Link to="/"><h2>Products</h2></Link>
            </div>
            <div>
-            <Link to="/cart"><AiOutlineShoppingCart className={style.cart_icon}/><span className={style.cart_count}>1</span></Link>
+            <Link to="/cart"><AiOutlineShoppingCart className={style.cart_icon}/>
+            <span className={style.cart_count}>1</span></Link>
            </div>
         </div>
     </div>
