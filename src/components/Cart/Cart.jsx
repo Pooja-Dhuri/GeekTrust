@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../Redux/action";
 import style from './cart.module.css'
@@ -28,7 +27,7 @@ const Cart = () => {
         cartproducts.map((ele) => (
           <div key={ele.id} className={style.cart_product_box}>
             <div>
-              <img src={ele.imageURL} alt="cart image" className={style.cart_product_image}/>
+              <img src={ele.imageURL} alt="pic" className={style.cart_product_image}/>
             </div>
             <div>
               <p>{ele.name}</p>

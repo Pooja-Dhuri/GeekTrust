@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, getProducts } from '../../Redux/action'
 import style from './Products.module.css'
@@ -10,7 +10,7 @@ const Products = () => {
 
   useEffect(() => {
    dispatch(getProducts())
-  }, [])
+  }, [dispatch])
 
   const handleAdd=(e)=>{
     console.log(e)
@@ -20,11 +20,11 @@ const Products = () => {
   return (
     <div className={style.products_main_box} >
         {
-          products && products.map((e)=>(
+          products.length===0 ? "No Product found !!!" : products.map((e)=>(
             <div className={style.product_single_div} key={e.id}>
               <div>
                 <p>{e.name}</p>
-                <img src={e.imageURL} alt="product image" className= 
+                <img src={e.imageURL} alt="product" className= 
                            {style.product_single_image}/>
               </div>
               <div className={style.product_single_price_div}>

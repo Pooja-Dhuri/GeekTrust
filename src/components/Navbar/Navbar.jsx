@@ -1,9 +1,11 @@
 import React from 'react'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import style from './Navbar.module.css'
 
 const Navbar = () => {
+  const cart=useSelector((store)=>store.cart)
   return (
     <div className={style.navbar_main_box}>
 
@@ -19,7 +21,7 @@ const Navbar = () => {
            </div>
            <div>
             <Link to="/cart"><AiOutlineShoppingCart className={style.cart_icon}/>
-            <span className={style.cart_count}>1</span></Link>
+            <span className={style.cart_count}>{cart.length}</span></Link>
            </div>
         </div>
     </div>
