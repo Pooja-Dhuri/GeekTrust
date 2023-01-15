@@ -14,8 +14,9 @@
 .home_filter_box{
     border: 1px solid gray;
     width: 25%;
+    height: fit-content;
 }
 .home_products_box{
     border: 1px solid green;
-    width: 60%;
+    width: 70%;
 }

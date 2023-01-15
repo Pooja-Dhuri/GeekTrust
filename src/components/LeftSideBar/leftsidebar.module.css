@@ -7,5 +7,8 @@
 .filter_main_box{
     line-height: 0.001px;
     text-align: left;
-    padding: 40px;
+    padding: 20px 40px;
+}
+.filter_main_box>div>p{
+    font-size: 20px;
 }

@@ -7,65 +7,62 @@ const LeftSidebar = () => {
 
         {/* colours */}
         <div>
-            <h3>Colours</h3>
+            <p>Colours</p>
             <div>
                 <input type="checkbox" />
-                <h5>Red</h5>
+                <p>Red</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>Blue</h5>
+                <p>Blue</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>Green</h5>
+                <p>Green</p>
             </div>
-       
 
         {/* gender */}
         
-            <h3>Gender</h3>
+            <p>Gender</p>
             <div>
                 <input type="checkbox" />
-                <h5>Male</h5>
+                <p>Male</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>Female</h5>
+                <p>Female</p>
             </div>
-        
 
         {/*price  */}
        
-            <h3>Price</h3>
+            <p>Price</p>
             <div>
                 <input type="checkbox" />
-                <h5>0-250</h5>
+                <p>0-250</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>251-450</h5>
+                <p>251-450</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>450</h5>
+                <p>450</p>
             </div>
-       
 
         {/* type */}
         
-            <h3>Type</h3>
+            <p>Type</p>
             <div>
                 <input type="checkbox" />
-                <h5>Polo</h5>
+                <p>Polo</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>Hoodie</h5>
+                <p>Hoodie</p>
             </div>
             <div>
                 <input type="checkbox" />
-                <h5>Basic</h5>
+                <p>Basic</p>
             </div>
         </div>
     </div>
