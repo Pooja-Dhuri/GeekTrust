@@ -1,22 +1,22 @@
 .home_main_box{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .home_search_box{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 40%;
 }
 .home_bottom_box{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     justify-content: space-between;
     padding: 10px 50px 0px 50px;
 }
 .home_filter_box{
-    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     width: 25%;
     height: fit-content;
 }
 .home_products_box{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 70%;
 }
