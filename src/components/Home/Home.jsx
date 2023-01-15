@@ -3,13 +3,15 @@ import LeftSidebar from '../LeftSideBar/LeftSidebar'
 import Products from '../Products/Products'
 import Search from '../search/Search'
 import style from './Home.module.css'
+import {AiTwotoneFilter} from 'react-icons/ai'
 
 const Home = () => {
   return (
     <div className={style.home_main_box}>
         {/* serach input */}
         <div className={style.home_search_box}>
-           <Search/>
+           <div><Search/></div>
+           <div className={style.filter_icon}><AiTwotoneFilter/></div>
         </div>
 
         {/* bottom products and filter box */}
@@ -23,6 +25,8 @@ const Home = () => {
             <Products/>
            </div>
         </div>
+
+        
     </div>
   )
 }

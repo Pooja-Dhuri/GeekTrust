@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* product and cart */}
         <div className={style.navbar_product_box}>
            <div>
-            <Link to="/"><h2>Products</h2></Link>
+            <Link to="/"><h2 className={style.navbar_product_text}>Products</h2></Link>
            </div>
            <div>
             <Link to="/cart"><AiOutlineShoppingCart className={style.cart_icon}/>

@@ -19,3 +19,10 @@
     justify-content: space-around;
     align-items: center;
 }
+
+/* media query for mobile */
+@media only screen and (max-width: 600px) {
+    .products_main_box{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }

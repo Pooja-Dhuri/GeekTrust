@@ -23,6 +23,7 @@ const Cart = () => {
 
   return (
     <div>
+      <h1>Shoping Cart</h1>
       {cartproducts &&
         cartproducts.map((ele) => (
           <div key={ele.id} className={style.cart_product_box}>

@@ -20,3 +20,27 @@
     /* border: 1px solid green; */
     width: 70%;
 }
+.filter_icon{
+    visibility: hidden;
+}
+
+/* media query for mobile */
+@media only screen and (max-width: 600px) {
+    .home_search_box{
+        /* border: 1px solid red; */
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home_filter_box{
+        display: none;
+    }
+    .home_products_box{
+       margin: auto;
+    }
+    .filter_icon{
+        visibility: visible;
+    }
+
+  }
