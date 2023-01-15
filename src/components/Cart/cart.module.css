@@ -1,0 +1,10 @@
+.cart_product_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.cart_product_image{
+    width: 80px;
+    height: 80px;
+}

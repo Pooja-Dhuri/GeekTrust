@@ -1,39 +1,47 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { removeFromCart } from '../../Redux/action'
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../../Redux/action";
+import style from './cart.module.css'
 
 const Cart = () => {
-   const dispatch=useDispatch()
-   const cartproducts=useSelector((store)=>store.cart)
-   console.log(cartproducts)
+  const dispatch = useDispatch();
+  const cartproducts = useSelector((store) => store.cart);
+  console.log(cartproducts);
 
-const sum = cartproducts.reduce((accumulator, currentValue) => accumulator + currentValue.price,0);
+  // calculation for total products
+  const sum = cartproducts.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price,
+    0
+  );
 
-// console.log(sum)
-const handleDelete=(id)=>{
-  dispatch(removeFromCart(id))
-}
+  // console.log(sum)
+
+  // handling delete functionality
+  const handleDelete = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
   return (
     <div>
-       {
-        cartproducts && cartproducts.map((ele)=>(
-          <div key={ele.id}>
-            <div><img src={ele.imageURL} alt="" /></div>
+      {cartproducts &&
+        cartproducts.map((ele) => (
+          <div key={ele.id} className={style.cart_product_box}>
+            <div>
+              <img src={ele.imageURL} alt="cart image" className={style.cart_product_image}/>
+            </div>
             <div>
               <p>{ele.name}</p>
               <p>{ele.price}</p>
             </div>
-            <div>quantity</div>
-            <button onClick={()=>handleDelete(ele.id)}>Delete</button>
+            <button>quantity:{1}</button>
+            <button onClick={() => handleDelete(ele.id)}>Delete</button>
           </div>
-        ))
-       }
-       <hr />
-          <h3>total:{sum}</h3>
+        ))}
+      <hr />
+      <h3>Total:Rs.{sum}</h3>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
