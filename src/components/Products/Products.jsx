@@ -12,15 +12,16 @@ const Products = () => {
    dispatch(getProducts())
   }, [])
 
-  const handleAdd=()=>{
-    dispatch(addToCart())
+  const handleAdd=(e)=>{
+    console.log(e)
+    dispatch(addToCart(e))
   }
     
   return (
-    <div className={style.products_main_box}>
+    <div className={style.products_main_box} >
         {
           products && products.map((e)=>(
-            <div className={style.product_single_div} >
+            <div className={style.product_single_div} key={e.id}>
               <div>
                 <p>{e.name}</p>
                 <img src={e.imageURL} alt="product image" className= 
@@ -28,7 +29,7 @@ const Products = () => {
               </div>
               <div className={style.product_single_price_div}>
                 <p>Rs.{e.price}</p>
-                <button onClick={handleAdd}>Add To Cart</button>
+                <button onClick={()=>handleAdd(e)}>Add To Cart</button>
               </div>
             </div>
           ))

@@ -16,7 +16,7 @@ export const Reducer = (oldstate = initstate, action) => {
       };
 
     case types.ADD_TO_CART:
-        console.log(payload)
+        console.log("cart",payload)
         return { ...oldstate, cart: [ ...oldstate.cart,{ ...payload }] };
 
     case types.REMOVE_FROM_CART:
