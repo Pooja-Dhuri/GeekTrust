@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, getProducts } from '../../Redux/action'
 import style from './Products.module.css'
 
 const Products = () => {
+  const dispatch=useDispatch()
+  const products=useSelector((store)=>store.tshirts)
+  console.log(products)
 
-    const [products,setProducts]=useState()
+  useEffect(() => {
+   dispatch(getProducts())
+  }, [])
 
-    const getProducts=()=>{
-            fetch('https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json')
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data)
-              setProducts(data)
-    })
+  const handleAdd=()=>{
+    dispatch(addToCart())
   }
-    useEffect(() => {
-      getProducts()
-    }, [])
     
   return (
     <div className={style.products_main_box}>
@@ -24,11 +23,12 @@ const Products = () => {
             <div className={style.product_single_div} >
               <div>
                 <p>{e.name}</p>
-                <img src={e.imageURL} alt="product image" className={style.product_single_image}/>
+                <img src={e.imageURL} alt="product image" className= 
+                           {style.product_single_image}/>
               </div>
               <div className={style.product_single_price_div}>
                 <p>Rs.{e.price}</p>
-                <button>Add To Cart</button>
+                <button onClick={handleAdd}>Add To Cart</button>
               </div>
             </div>
           ))

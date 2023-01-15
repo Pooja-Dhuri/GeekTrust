@@ -11,33 +11,23 @@ export const getProducts = () => (dispatch) => {
       "https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json"
     )
       .then((res) => res.json())
-      .then((res) => {
+      .then((data) => {
+        console.log("hi",data)
         return dispatch({
           type: GET_TSHIRTS,
-          payload: res,
+          payload: data,
         });
       });
   };
-  
-  
-//   export const searchProducts =(payload)=>(dispatch)=>{
-//     return (dispatch({
-//       type:types.SEARCH_PRODUCTS,
-//       payload:payload
-//     }))
-//   }
-  
-  export const addCart =(payload)=>(dispatch)=>{
-  
+
+  export const addToCart =(payload)=>(dispatch)=>{
       return dispatch({
           type:ADD_TO_CART,
           payload:payload
       })
-  
   }
-  
-  
-  export const removeCart =(payload)=>(dispatch)=>{
+ 
+  export const removeFromCart =(payload)=>(dispatch)=>{
   
     return dispatch({
         type:REMOVE_FROM_CART,
